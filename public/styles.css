@@ -1,7 +1,7 @@
 /*////////////////////////////////////////////////////////
 /////FONTES UTILIZADAS
 ///////////////////////////////////////////////////////*/
-@import url(https://db.onlinewebfonts.com/c/5419ad9b0511db774b44a6b0d2733542?family=F0Geena+Mono+Bold);
+@import url('https://db.onlinewebfonts.com/c/5419ad9b0511db774b44a6b0d2733542?family=F0Geena+Mono+Bold');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 
@@ -56,6 +56,29 @@
 
 /* Media Query for Laptops and Desktops */
 @media (min-width: 1025px) and (max-width: 1280px) {
+    h1{
+        font-family: "F0Geena Mono Bold";
+        font-size: 90px;
+    }
+    
+    h2, h3, h4, h5{
+        font-family: "F0Geena Mono Bold";
+        font-size: 35px;
+    }
+    
+    p, a, button, span{
+        font-family: "Montserrat", sans-serif !important;
+        font-size: 16px;
+    }
+    
+    b{
+        font-family: "Montserrat", sans-serif !important;
+        font-size: 24px;
+    }
+}
+
+/* Media Query for Laptops and Desktops */
+@media (min-width: 1280px) {
     h1{
         font-family: "F0Geena Mono Bold";
         font-size: 90px;
