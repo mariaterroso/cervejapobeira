@@ -84,6 +84,7 @@
     .desktop-hid {
         text-align: end;
         color: white;
+        text-decoration: none;
     }
 
     .mobile-show {
@@ -156,6 +157,10 @@
         font-size: 24px;
     }
 
+    .carousel-item img{
+        height: 800px;
+    }
+
     .hero-title {
         word-wrap: break-word;
         width: 40%;
@@ -208,6 +213,10 @@
     b {
         font-family: "Montserrat", sans-serif !important;
         font-size: 24px;
+    }
+
+    .carousel-item img{
+        height: 800px;
     }
 
     .hero-title {
