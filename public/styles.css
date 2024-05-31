@@ -39,6 +39,34 @@
         font-family: "Montserrat", sans-serif !important;
         font-size: 16px;
     }
+
+    .d-none{
+        display: flex !important;
+        flex-direction: column;
+    }
+
+    .hero-title {
+        width: 100%;
+        position: relative;
+        bottom: 0;
+        right: 0;
+        text-align: start;
+    }
+
+    .hero-button {
+        position: relative;
+        bottom: 0;
+        right: 0;
+        text-decoration: none;
+        color: white;
+        padding: 15px;
+        border: 3px solid white;
+        font-weight: bold;
+    }
+
+    .sobreindex img{
+        display: none;
+    }
 }
 
 /* Media Query for Tablets Ipads portrait mode */
@@ -97,6 +125,26 @@
         font-family: "Montserrat", sans-serif !important;
         font-size: 24px;
     }
+
+    .hero-title {
+        word-wrap: break-word;
+        width: 40%;
+        position: relative;
+        bottom: 230px;
+        right: 150px;
+        text-align: start;
+    }
+
+    .hero-button {
+        position: relative;
+        bottom: 180px;
+        right: 750px;
+        text-decoration: none;
+        color: white;
+        padding: 15px;
+        border: 3px solid white;
+        font-weight: bold;
+    }
 }
 
 /* Media Query for Screens */
@@ -126,31 +174,31 @@
         font-family: "Montserrat", sans-serif !important;
         font-size: 24px;
     }
+
+    .hero-title {
+        word-wrap: break-word;
+        width: 40%;
+        position: relative;
+        bottom: 230px;
+        right: 150px;
+        text-align: start;
+    }
+
+    .hero-button {
+        position: relative;
+        bottom: 180px;
+        right: 750px;
+        text-decoration: none;
+        color: white;
+        padding: 15px;
+        border: 3px solid white;
+        font-weight: bold;
+    }
 }
 
 /*////////////////////////////////////////////////////////
 /////HOMEPAGE
 ///////////////////////////////////////////////////////*/
-
-.hero-title {
-    word-wrap: break-word;
-    width: 40%;
-    position: relative;
-    bottom: 230px;
-    right: 150px;
-    text-align: start;
-}
-
-.hero-button {
-    position: relative;
-    bottom: 180px;
-    right: 750px;
-    text-decoration: none;
-    color: white;
-    padding: 15px;
-    border: 3px solid white;
-    font-weight: bold;
-}
 
 .sobreindex {
     display: flex;
