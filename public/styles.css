@@ -40,7 +40,7 @@
         font-size: 16px;
     }
 
-    .d-none{
+    .d-none {
         display: flex !important;
         flex-direction: column;
     }
@@ -64,8 +64,35 @@
         font-weight: bold;
     }
 
-    .sobreindex img{
+    .sobreindex img {
         display: none;
+    }
+
+    .sobretitle {
+        margin-top: 35px;
+    }
+
+    .sobre-button {
+        margin-bottom: 35px;
+    }
+
+    .servicos-hid {
+        display: none !important;
+    }
+
+    .desktop-hid {
+        text-align: end;
+        color: white;
+    }
+
+    .mobile-show {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    .mobile-show img{
+        margin-left: 10px;
     }
 }
 
@@ -145,6 +172,10 @@
         border: 3px solid white;
         font-weight: bold;
     }
+
+    .desktop-hid {
+        display: none;
+    }
 }
 
 /* Media Query for Screens */
@@ -193,6 +224,10 @@
         padding: 15px;
         border: 3px solid white;
         font-weight: bold;
+    }
+
+    .desktop-hid {
+        display: none;
     }
 }
 
