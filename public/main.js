@@ -1,34 +1,34 @@
-function fetchArtists() {
-    fetch('http://localhost:3000/artists')
+function fetchCerveja() {
+    fetch('http://localhost:5500/cerveja')
         .then(function (response) { return response.json(); })
-        .then(function (artists) {
-            let list = document.getElementById('artists-list');
-            artists.forEach(function (artist) {
+        .then(function (cerveja) {
+            let list = document.getElementById('cerveja-list');
+            cerveja.forEach(function (cerveja) {
                 let item = document.createElement('li');
-                item.textContent = artist.name;
+                item.textContent = cerveja.title;
                 list.appendChild(item);
             });
         })
         .catch(function (error) {
-            console.error('Error fetching artists:', error);
+            console.error('Error fetching cerveja:', error);
         });
 }
 
-function fetchAlbums() {
-    fetch('http://localhost:3000/albums')
+function fetchPacksmistos() {
+    fetch('http://localhost:5500/packsmistos')
         .then(function (response) { return response.json(); })
-        .then(function (albums) {
-            let list = document.getElementById('albums-list');
-            albums.forEach(function (album) {
+        .then(function (packsmistos) {
+            let list = document.getElementById('packsmistos-list');
+            packsmistos.forEach(function (album) {
                 let item = document.createElement('li');
-                item.textContent = album.title + ' by ' + album.artist;
+                item.textContent = packsmistos.title;
                 list.appendChild(item);
             });
         })
         .catch(function (error) {
-            console.error('Error fetching albums:', error);
+            console.error('Error fetching packsmistos:', error);
         });
 }
 
-fetchArtists();
-fetchAlbums();
+fetchCerveja();
+fetchPacksmistos();
