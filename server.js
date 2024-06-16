@@ -7,7 +7,7 @@ app.use(express.static('public'));
 app.use(express.json());
 
 // Connection
-const uri = "mongodb+srv://mariaterroso41:poulson14@esmad-pgw.7seuv3y.mongodb.net/Musicstore?retryWrites=true&w=majority&appName=ESMAD-PGW"; // Change this to your MongoDB URI
+const uri = "mongodb+srv://mariaterroso41:poulson14@esmad-pgw.7seuv3y.mongodb.net/PobeiraLoja?retryWrites=true&w=majority&appName=ESMAD-PGW"; // Change this to your MongoDB URI
 mongoose.connect(uri)
     .then(function () {
         console.log('Connected to MongoDB');
@@ -17,127 +17,125 @@ mongoose.connect(uri)
     });
 
 // Models
-const artistSchema = new mongoose.Schema({
-    name: String,
-    genre: String
-}, { versionKey: false });
-const Artist = mongoose.model('Artist', artistSchema);
-
-const albumSchema = new mongoose.Schema({
+const cervejaSchema = new mongoose.Schema({
     title: String,
-    artist: String,
-    release_year: Number,
-    tracks: Number
+    price: String
 }, { versionKey: false });
-const Album = mongoose.model('Album', albumSchema);
+const Cerveja = mongoose.model('Cerveja', cervejaSchema);
+
+const packsmistosSchema = new mongoose.Schema({
+    title: String,
+    price: String
+}, { versionKey: false });
+const Packsmistos = mongoose.model('Packsmistos', packsmistosSchema);
 
 // Endpoints
-app.post('/artists', function (req, res) {
-    let newArtist = new Artist(req.body);
-    newArtist.save()
-        .then(function (artist) {
-            res.send(artist);
+app.post('/cerveja', function (req, res) {
+    let newCerveja = new Cerveja(req.body);
+    newCerveja.save()
+        .then(function (cerveja) {
+            res.send(cerveja);
         })
         .catch(function (err) {
-            res.status(400).send({ message: 'Error adding artist', error: err });
+            res.status(400).send({ message: 'Error adding cerveja', error: err });
         });
 });
 
-app.post('/albums', function (req, res) {
-    let newAlbum = new Album(req.body);
-    newAlbum.save()
-        .then(function (album) {
-            res.send(album);
+app.post('/packsmistos', function (req, res) {
+    let newPacksmistos = new Packsmistos(req.body);
+    newPacksmistos.save()
+        .then(function (packsmistos) {
+            res.send(packsmistos);
         })
         .catch(function (err) {
-            res.status(400).send({ message: 'Error adding album', error: err });
+            res.status(400).send({ message: 'Error adding packsmistos', error: err });
         });
 });
 
-app.get('/artists', function (req, res) {
+app.get('/cerveja', function (req, res) {
     let query = {};
-    if (req.query.genre) {
-        query.genre = req.query.genre;
+    if (req.query.title) {
+        query.title = req.query.title;
     }
-    Artist.find(query)
-        .then(function (artists) {
-            res.send(artists);
+    Cerveja.find(query)
+        .then(function (cerveja) {
+            res.send(cerveja);
         })
         .catch(function (err) {
-            res.status(500).send({ message: 'Error fetching artists', error: err });
+            res.status(500).send({ message: 'Error fetching cerveja', error: err });
         });
 });
 
-app.get('/albums', function (req, res) {
+app.get('/packsmistos', function (req, res) {
     let query = {};
-    if (req.query.artist) {
-        query.artist = req.query.artist;
+    if (req.query.title) {
+        query.title = req.query.title;
     }
-    Album.find(query)
-        .then(function (albums) {
-            res.send(albums);
+    Packsmistos.find(query)
+        .then(function (packsmistos) {
+            res.send(packsmistos);
         })
         .catch(function (err) {
-            res.status(500).send({ message: 'Error fetching albums', error: err });
+            res.status(500).send({ message: 'Error fetching packsmistos', error: err });
         });
 });
 
-app.put('/artists/:id', function (req, res) {
-    Artist.findByIdAndUpdate(req.params.id, req.body, { new: true })
-        .then(function (artist) {
-            if (artist) {
-                res.send(artist);
+app.put('/cerveja/:id', function (req, res) {
+    Cerveja.findByIdAndUpdate(req.params.id, req.body, { new: true })
+        .then(function (cerveja) {
+            if (cerveja) {
+                res.send(cerveja);
             } else {
-                res.status(404).send({ message: 'Artist not found' });
+                res.status(404).send({ message: 'Cerveja not found' });
             }
         })
         .catch(function (err) {
-            res.status(500).send({ message: 'Error updating artist', error: err });
+            res.status(500).send({ message: 'Error updating cerveja', error: err });
         });
 });
 
-app.put('/albums/:id', function (req, res) {
-    Album.findByIdAndUpdate(req.params.id, req.body, { new: true })
-        .then(function (album) {
-            if (album) {
-                res.send(album);
+app.put('/packsmistos/:id', function (req, res) {
+    Packsmistos.findByIdAndUpdate(req.params.id, req.body, { new: true })
+        .then(function (packsmistos) {
+            if (packsmistos) {
+                res.send(packsmistos);
             } else {
-                res.status(404).send({ message: 'Album not found' });
+                res.status(404).send({ message: 'Packsmistos not found' });
             }
         })
         .catch(function (err) {
-            res.status(500).send({ message: 'Error updating album', error: err });
+            res.status(500).send({ message: 'Error updating packsmistos', error: err });
         });
 });
 
-app.delete('/artists/:id', function (req, res) {
-    Artist.findByIdAndDelete(req.params.id)
-        .then(function (artist) {
-            if (artist) {
-                res.send({ message: 'Artist deleted successfully!' });
+app.delete('/cerveja/:id', function (req, res) {
+    Cerveja.findByIdAndDelete(req.params.id)
+        .then(function (cerveja) {
+            if (cerveja) {
+                res.send({ message: 'Cerveja deleted successfully!' });
             } else {
-                res.status(404).send({ message: 'Artist not found' });
+                res.status(404).send({ message: 'Cerveja not found' });
             }
         })
         .catch(function (err) {
-            res.status(500).send({ message: 'Error deleting artist', error: err });
+            res.status(500).send({ message: 'Error deleting cerveja', error: err });
         });
 });
 
-app.delete('/albums/:id', function (req, res) {
-    Album.findByIdAndDelete(req.params.id)
-        .then(function (album) {
-            if (album) {
-                res.send({ message: 'Album deleted successfully!' });
+app.delete('/packsmistos/:id', function (req, res) {
+    Packsmistos.findByIdAndDelete(req.params.id)
+        .then(function (packsmistos) {
+            if (packsmistos) {
+                res.send({ message: 'Packsmistos deleted successfully!' });
             } else {
-                res.status(404).send({ message: 'Album not found' });
+                res.status(404).send({ message: 'Packsmistos not found' });
             }
         })
         .catch(function (err) {
-            res.status(500).send({ message: 'Error deleting album', error: err });
+            res.status(500).send({ message: 'Error deleting packsmistos', error: err });
         });
 });
 
-app.listen(3000, function () {
-    console.log('Server running on http://localhost:3000');
+app.listen(5500, function () {
+    console.log('Server running on http://localhost:5500');
 });
