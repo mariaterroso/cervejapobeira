@@ -153,19 +153,19 @@
           <div class="col-2">
             <span>ZONA</span>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="image-group" id="radio1" checked>
+              <input class="form-check-input" type="radio" name="image-group" id="radio1" onclick="toggle()" checked>
               <label class="form-check-label" for="radio1">
                 NORTE
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="image-group" id="radio2">
+              <input class="form-check-input" type="radio" name="image-group" id="radio2" onclick="toggle()">
               <label class="form-check-label" for="radio2">
                 CENTRO
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="image-group" id="radio3">
+              <input class="form-check-input" type="radio" name="image-group" id="radio3" onclick="toggle()">
               <label class="form-check-label" for="radio3">
                 SUL
               </label>
@@ -290,5 +290,7 @@
     <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="onde-script.js"></script>
   </body>
 </html>

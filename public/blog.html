@@ -71,49 +71,138 @@
     </div>
   </nav>
 
-    <!-- FOOTER -->
-    <footer>
-      <div
-        class="container-fluid"
-        style="background-color: black; color: white"
-      >
-        <div class="container p-5">
-          <div class="row">
-            <div class="col-12 col-md-4 d-flex justify-content-center">
-                <img src="imgs/footer.logo.png" class="img-fluid">
-            </div>
-
-            <div class="mb-5 col-12 col-md-4 d-flex justify-content-center  flex-column align-items-center">
-              <p class="mt-3">TERMOS & CONDIÇÕES</p>
-              <p class="mt-3">POLÍTICAS DE PRIVACIDADE</p>
-              <div class="mt-3">
-                <img src="imgs/footer.pagamento.png" class="img-fluid" style="width: 200px;">
-              </div>
-            </div>
-
-            <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
-              <img src="imgs/footer.facebook.png" class="img-fluid mx-2" style="width: 35px;">
-              <img src="imgs/footer.instagram.png" class="img-fluid mx-2" style="width: 35px;">
-              <img src="imgs/footer.linkedin.png" class="img-fluid mx-2" style="width: 35px;">
-              <img src="imgs/footer.youtube.png" class="img-fluid mx-2" style="width: 35px;">
-            </div>
+  <!-- MAIN -->
+  <main>
+    <div class="container w-100">
+      <div class="row w-100 py-5">
+        <div class="col-3">
+          <div id="button1" class="border border-4 border-dark d-flex justify-content-center bg-dark p-3" type="button" onclick="showDiv('div1')">
+            <span id="button1-span" class="fw-bold" style="font-size: 20px; color: white;">VER TUDO</span>
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="button2" class="border border-4 border-dark d-flex justify-content-center p-3" type="button" onclick="showDiv('div2')">
+            <span id="button2-span" class="fw-bold" style="font-size: 20px;">NOTÍCIAS</span>
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="button3" class="border border-4 border-dark d-flex justify-content-center p-3" type="button" onclick="showDiv('div3')">
+            <span id="button3-span" class="fw-bold" style="font-size: 20px;">EVENTOS</span>
+          </div>
+        </div>
+        <div class="col-3">
+          <div id="button4" class="border border-4 border-dark d-flex justify-content-center p-3" type="button" onclick="showDiv('div4')">
+            <span id="button4-span" class="fw-bold" style="font-size: 20px;">CURIOSIDADES</span>
           </div>
         </div>
       </div>
-      <div
-        class="container-fluid p-5 border-top border-white"
-        style="background-color: black; color: white"
-      >
-        <p class="row d-flex justify-content-center">
-          Copyright© Cerveja Pobeira, 2024. Todos os direitos reservados
-        </p>
+    </div>
+
+    <div class="content-blog" id="div1">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-6">
+            <img src="imgs/blog.2.jpg" class="img-fluid">
+          </div>
+          <div class="col-6 ps-3 d-flex flex-column justify-content-center">
+            <h2>Cerveja Pobeira na RTP1 - Uma Experiência Memorável!</h2>
+            <span class="mt-4">Pela primeira vez, tivemos a oportunidade de estar na televisão, na RTP1, no programa "Aqui é Portugal".</span>
+            <button class="bg-dark p-4 mt-4" type="button" style="width: 180px;">
+              <span style="color: white;" class="fw-bold">LER MAIS »</span>
+            </button>
+          </div>
+        </div>
       </div>
-    </footer>
+  
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-6">
+            <img src="imgs/blog.2.jpg" class="img-fluid">
+          </div>
+          <div class="col-6 ps-3 d-flex flex-column justify-content-center">
+            <h2>Cerveja Pobeira na RTP1 - Uma Experiência Memorável!</h2>
+            <span class="mt-4">Pela primeira vez, tivemos a oportunidade de estar na televisão, na RTP1, no programa "Aqui é Portugal".</span>
+            <button class="bg-dark p-4 mt-4" type="button" style="width: 180px;">
+              <span style="color: white;" class="fw-bold">LER MAIS »</span>
+            </button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-6">
+            <img src="imgs/blog.2.jpg" class="img-fluid">
+          </div>
+          <div class="col-6 ps-3 d-flex flex-column justify-content-center">
+            <h2>Cerveja Pobeira na RTP1 - Uma Experiência Memorável!</h2>
+            <span class="mt-4">Pela primeira vez, tivemos a oportunidade de estar na televisão, na RTP1, no programa "Aqui é Portugal".</span>
+            <button class="bg-dark p-4 mt-4" type="button" style="width: 180px;">
+              <span style="color: white;" class="fw-bold">LER MAIS »</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-blog container p-5" id="div2">
+      NO CONTENT
+    </div>
+    
+    <div class="content-blog container p-5" id="div3">
+      NO CONTENT
+    </div>
+
+    <div class="content-blog container p-5" id="div4">
+      NO CONTENT
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div
+      class="container-fluid"
+      style="background-color: black; color: white"
+    >
+      <div class="container p-5">
+        <div class="row">
+          <div class="col-12 col-md-4 d-flex justify-content-center">
+              <img src="imgs/footer.logo.png" class="img-fluid">
+          </div>
+
+          <div class="mb-5 col-12 col-md-4 d-flex justify-content-center  flex-column align-items-center">
+            <p class="mt-3">TERMOS & CONDIÇÕES</p>
+            <p class="mt-3">POLÍTICAS DE PRIVACIDADE</p>
+            <div class="mt-3">
+              <img src="imgs/footer.pagamento.png" class="img-fluid" style="width: 200px;">
+            </div>
+          </div>
+
+          <div class="col-12 col-md-4 d-flex justify-content-center align-items-center">
+            <img src="imgs/footer.facebook.png" class="img-fluid mx-2" style="width: 35px;">
+            <img src="imgs/footer.instagram.png" class="img-fluid mx-2" style="width: 35px;">
+            <img src="imgs/footer.linkedin.png" class="img-fluid mx-2" style="width: 35px;">
+            <img src="imgs/footer.youtube.png" class="img-fluid mx-2" style="width: 35px;">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="container-fluid p-5 border-top border-white"
+      style="background-color: black; color: white"
+    >
+      <p class="row d-flex justify-content-center">
+        Copyright© Cerveja Pobeira, 2024. Todos os direitos reservados
+      </p>
+    </div>
+  </footer>
   
   <!-- Bootstrap JS, Popper.js, and jQuery -->
   <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
   <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
   <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
+
+  <script src="blog-script.js"></script>
 </body>
 </html>

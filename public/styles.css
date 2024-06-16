@@ -333,17 +333,6 @@
     display: none; /* Hide by default */
 }
 
-/* Show the image container when the corresponding radio button is selected */
-#radio1:checked ~ #image-container1,
-#radio2:checked ~ #image-container2,
-#radio3:checked ~ #image-container3 {
-    display: block;
-}
-
-
-
-
-  
   .container {
     display: flex;
     justify-content: center;
@@ -416,4 +405,13 @@
     height: 50px;
     background-color: white;
     border-radius: 50%;
+  }
+
+
+  .content-blog {
+    display: none;
+  }
+
+  #div1 {
+    display: block;
   }
