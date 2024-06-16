@@ -6,69 +6,143 @@
   <title>Pobeira</title>
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark border border-danger">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-        <a class="navbar-brand" href="index.html">
-          <img src="./imgs/randomlogo.png" style="height: 70px;" alt="Logo Cerveja Pobeira">
-        </a>
-        <ul class="navbar-nav">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">SOBRE NÓS</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="sobre.html">A nossa História</a></li>
-              <li><a class="dropdown-item" href="#">A Cerveja Pobeira</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">PRODUTOS</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="produtos.html">A nossa Loja</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">SERVIÇOS</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="servicos-party-experience.html">Pobeira Party Experience</a></li>
-              <li><a class="dropdown-item" href="#">Personaliza o teu Rótulo</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="onde.html">ONDE BEBER</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="blog.html">BLOG</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="parceiros.html">PARCEIROS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contactos.html">CONTACTOS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">LOGIN</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              <img src="./imgs/cart.png" style="height: 30px;" alt="Imagem icon de um carrinho de compras">
-            </a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="./imgs/portugal.png" style="height: 30px;" alt="Imagem da bandeira de Portugal">
-            </a>
-          </li>
-        </ul>
+    <!-- NAVBAR -->
+    <nav
+      class="navbar navbar-expand-lg navbar-dark bg-dark"
+    >
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNavDropdown"
+        >
+          <a class="navbar-brand" href="index.html">
+            <img
+              src="./imgs/header.logo.png"
+              alt="Logo Cerveja Pobeira"
+            />
+          </a>
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >SOBRE NÓS</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="sobre.html"
+                    >A nossa História</a
+                  >
+                </li>
+                <li><a class="dropdown-item" href="#">A Cerveja Pobeira</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle active"
+                aria-current="page"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >PRODUTOS</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="produtos.html">A nossa Loja</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >SERVIÇOS</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="servicos-party-experience.html"
+                    >Pobeira Party Experience</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Personaliza o teu Rótulo</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="onde.html">ONDE BEBER</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="parceiros.html">PARCEIROS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactos.html">CONTACTOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">LOGIN</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <img
+                  src="./imgs/header.carrinho.png"
+                  style="height: 30px"
+                  alt="Imagem icon de um carrinho de compras"
+                />
+              </a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <img
+                  src="./imgs/portugal.png"
+                  style="height: 30px"
+                  alt="Imagem da bandeira de Portugal"
+                />
+                <ul class="dropdown-menu">
+                  <li>
+                    <img
+                      src="./imgs/portugal.png"
+                      style="height: 30px"
+                      alt="Imagem da bandeira de Portugal"
+                    />
+                  </li>
+                </ul>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
+    </nav>
 
   <!-- FOOTER -->
   <footer>
