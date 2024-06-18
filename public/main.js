@@ -19,7 +19,7 @@ function fetchPacksmistos() {
         .then(function (response) { return response.json(); })
         .then(function (packsmistos) {
             let list = document.getElementById('packsmistos-list');
-            packsmistos.forEach(function (album) {
+            packsmistos.forEach(function (packsmistos) {
                 let item = document.createElement('li');
                 item.textContent = packsmistos.title;
                 list.appendChild(item);
