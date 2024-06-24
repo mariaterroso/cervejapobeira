@@ -111,6 +111,26 @@
         display: none;
       }
 
+      .product-container{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .products-item{
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .products-item button{
+        color: black;
+        font-weight: bold;
+        border: 3px solid black;
+        background-color: white;
+        padding: 10px;
+        margin-top: 15px;
+      }
+
 }
 
 /* Media Query for Tablets Ipads portrait mode */
@@ -500,25 +520,6 @@
 
   .produtos .container{
     display: block;
-  }
-
-  .carousel-indicators [data-bs-target] {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: #fff;
-    border: 2px solid #000;
-  }
-
-  .carousel-indicators .active {
-    background-color: #000;
-    border: 2px solid #000;
-  }
-
-  .carousel-item {
-    padding: 30px;
-    text-align: center;
-    background-color: #fff;
   }
 
   .product-container{
