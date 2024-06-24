@@ -133,33 +133,45 @@
 
     <!-- MAIN -->
     <main>
-      <div class="container pt-5">
-        <div class="row pt-5 pb-5">
-          <div class="col-2">
-            <span>ZONA</span>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="image-group" id="radio1" onclick="toggle()" checked>
-              <label class="form-check-label" for="radio1">
-                NORTE
-              </label>
+      <div class="container pt-2 pt-sm-5">
+        <div class="row pt-4 pt-sm-5 pb-5">
+          <div class="col-12 col-sm-2 mb-4 mb-sm-0">
+
+            <div>
+              <div class="d-flex d-sm-block justify-content-center">
+                <span class="fw-bold fs-5">ZONA</span>
+              </div>
+
+              <div class="d-flex d-sm-block justify-content-around">
+                <div class="form-check">
+                  <input class="form-check-input mt-2" type="radio" name="image-group" id="radio1" onclick="toggle()" checked>
+                  <label class="form-check-label" for="radio1">
+                    <span>NORTE</span>
+                  </label>
+                </div>
+  
+                <div class="form-check">
+                  <input class="form-check-input mt-2" type="radio" name="image-group" id="radio2" onclick="toggle()">
+                  <label class="form-check-label" for="radio2">
+                    <span>CENTRO</span>
+                  </label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input mt-2" type="radio" name="image-group" id="radio3" onclick="toggle()">
+                  <label class="form-check-label" for="radio3">
+                    <span>SUL</span>
+                  </label>
+                </div>
+              </div>
+              
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="image-group" id="radio2" onclick="toggle()">
-              <label class="form-check-label" for="radio2">
-                CENTRO
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="image-group" id="radio3" onclick="toggle()">
-              <label class="form-check-label" for="radio3">
-                SUL
-              </label>
-            </div>
+            
           </div>
   
-          <div class="image-container col-10" id="image-container1" style="display: block;">
+          <div class="image-container col-12 col-sm-10" id="image-container1" style="display: block;">
             <div class="row">
-              <div class="col-4">
+              <div class="col-sm-4 col-12 px-4 pb-4">
                 <div class="d-flex justify-content-center align-items-center" 
                       style="height: 250px; border-radius: 20px; color: white;
                               background-image: url(./imgs/onde_beber.póvoa_de_varzim.jpg); background-repeat: no-repeat; background-size: cover;">
@@ -167,7 +179,7 @@
                 </div>
               </div>
 
-              <div class="col-4">
+              <div class="col-sm-4 col-12 px-4 pb-4">
                 <div class="d-flex justify-content-center align-items-center" 
                       style="height: 250px; border-radius: 20px; color: white;
                               background-image: url(./imgs/onde_beber.vila_do_conde.jpg); background-repeat: no-repeat; background-size: cover;">
@@ -175,7 +187,7 @@
                 </div>
               </div>
 
-              <div class="col-4">
+              <div class="col-sm-4 col-12 px-4 pb-4">
                 <div class="d-flex justify-content-center align-items-center" 
                       style="height: 250px; border-radius: 20px; color: white;
                         background-image: url(./imgs/onde_beber.braga.webp); background-repeat: no-repeat; background-size: cover;">
@@ -184,8 +196,8 @@
               </div>
             </div>
 
-            <div class="row mt-5">
-              <div class="col-4">
+            <div class="row mt-sm-5 mt-0">
+              <div class="col-sm-4 col-12 px-4 pb-4">
                 <div class="d-flex justify-content-center align-items-center" 
                       style="height: 250px; border-radius: 20px; color: white;
                               background-image: url(./imgs/onde_beber.porto.webp); background-repeat: no-repeat; background-size: cover;">
@@ -193,7 +205,7 @@
                 </div>
               </div>
 
-              <div class="col-4">
+              <div class="col-sm-4 col-12 px-4 pb-4">
                 <div class="d-flex justify-content-center align-items-center" 
                       style="height: 250px; border-radius: 20px; color: white;
                               background-image: url(./imgs/onde_beber.matosinhos.jpg); background-repeat: no-repeat; background-size: cover;">
@@ -201,7 +213,7 @@
                 </div>
               </div>
 
-              <div class="col-4">
+              <div class="col-sm-4 col-12 px-4 pb-4">
                 <div class="d-flex justify-content-center align-items-center" 
                       style="height: 250px; border-radius: 20px; color: white;
                         background-image: url(./imgs/onde_beber.esposende.jpg); background-repeat: no-repeat; background-size: cover;">
@@ -210,8 +222,8 @@
               </div>
             </div>
 
-            <div class="row mt-5 pb-5">
-              <div class="col-4">
+            <div class="row mt-sm-5 mt-0 pb-5">
+              <div class="col-sm-4 col-12 px-4 pb-4">
                 <div class="d-flex justify-content-center align-items-center" 
                       style="height: 250px; border-radius: 20px; color: white;
                               background-image: url(./imgs/onde_beber.barcelos.jpg); background-repeat: no-repeat; background-size: cover;">
@@ -221,11 +233,11 @@
             </div>
           </div>
 
-          <div class="image-container col-10" id="image-container2">
+          <div class="image-container col-12 col-sm-10" id="image-container2">
             <span>SEM CIDADES NESTA ZONA</span>
           </div>
   
-          <div class="image-container col-10" id="image-container3">
+          <div class="image-container col-12 col-sm-10" id="image-container3">
             <span>SEM CIDADES NESTA ZONA</span>
           </div>
         </div>
