@@ -263,8 +263,18 @@
 }
 
 .sobre-button {
+    text-decoration: none;
+    color: #BF3B1D;
     padding: 15px;
     border: 3px solid #BF3B1D;
+    font-weight: bold;
+}
+
+.servico-button {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    border: 3px solid white;
     font-weight: bold;
 }
 
