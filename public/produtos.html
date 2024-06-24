@@ -7,6 +7,22 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    .custom-radio .form-check-input {
+        border-radius: 50%;
+    }
+    .custom-radio .form-check-input:checked {
+        background-color: #000;
+        border-color: #000;
+    }
+    .custom-radio .form-check-input:checked::before {
+        background-color: #000;
+    }
+    .custom-radio .form-check-input:focus {
+        box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.25);
+    }
+  </style>
 </head>
 <body>
 
@@ -133,47 +149,94 @@
 
     <main>
 
-      <h1>Produtos</h1>
+      <h1 class="px-4 py-3">LOJA</h1>
 
-      <div>
-        <div>
-          <b>Consumo</b>
-          <ul>filtro 1</ul>
-          <ul> filtro 2</ul>
+      <div class="px-4">
+        <div class="d-flex flex-column">
+          <div>
+            <b>CONSUMO</b>
+          </div>
+
+          <div class="d-flex flex-column">
+            <div class="form-check d-flex align-items-baseline d-sm-block custom-radio">
+              <input class="form-check-input" type="radio" name="image-group" id="radio1" onclick="toggle()" checked>
+              <label class="form-check-label ms-1" for="radio1">
+                <span>Cerveja</span>
+              </label>
+            </div>
+
+            <div class="form-check d-flex align-items-baseline d-sm-block custom-radio">
+              <input class="form-check-input" type="radio" name="image-group" id="radio2" onclick="toggle()">
+              <label class="form-check-label ms-1" for="radio2">
+                <span>Pack Mistos</span>
+              </label>
+            </div>
+
+            <div class="form-check d-flex align-items-baseline d-sm-block custom-radio">
+              <input class="form-check-input" type="radio" name="image-group" id="radio3" onclick="toggle()">
+              <label class="form-check-label ms-1" for="radio3">
+                <span>Pack de Harmonização</span>
+              </label>
+            </div>
+
+            <div class="form-check d-flex align-items-baseline d-sm-block custom-radio">
+              <input class="form-check-input" type="radio" name="image-group" id="radio4" onclick="toggle()">
+              <label class="form-check-label ms-1" for="radio4">
+                <span>Tapas</span>
+              </label>
+            </div>
+          </div>
         </div>
-        <div>
-          <b>Objetos</b>
-          <ul>filtro 1</ul>
-          <ul>filtro 2</ul>
+
+        <div class="d-flex flex-column mt-3">
+          <div>
+            <b>OBJETOS</b>
+          </div>
+
+          <div class="d-flex flex-column">
+            <div class="form-check d-flex align-items-baseline d-sm-block custom-radio">
+              <input class="form-check-input" type="radio" name="image-group" id="radio5" onclick="toggle()">
+              <label class="form-check-label ms-1" for="radio5">
+                <span>Vestuário</span>
+              </label>
+            </div>
+
+            <div class="form-check d-flex align-items-baseline d-sm-block custom-radio">
+              <input class="form-check-input" type="radio" name="image-group" id="radio6" onclick="toggle()">
+              <label class="form-check-label ms-1" for="radio6">
+                <span>Acessórios</span>
+              </label>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div>
-        <ul id="cerveja-list"></ul>
+      <div id="product-container1" style="display: block;">
+        <h5 id="cerveja-list"></h5>
         <a href="#" class="sobre-button">RESERVAR</a>
       </div>
 
-      <div>
+      <div id="product-container2" style="display: none;">
         <ul id="packsmistos-list"></ul>
         <a href="#" class="sobre-button">RESERVAR</a>
       </div>
 
-      <div>
+      <div id="product-container3" style="display: none;">
         <ul id="packsharmonizacao-list"></ul>
         <a href="#" class="sobre-button">RESERVAR</a>
       </div>
 
-      <div>
+      <div id="product-container4" style="display: none;">
         <ul id="tapas-list"></ul>
         <a href="#" class="sobre-button">RESERVAR</a>
       </div>
 
-      <div>
+      <div id="product-container5" style="display: none;">
         <ul id="vestuario-list"></ul>
         <a href="#" class="sobre-button">RESERVAR</a>
       </div>
 
-      <div>
+      <div id="product-container6" style="display: none;">
         <ul id="acessorios-list"></ul>
         <a href="#" class="sobre-button">RESERVAR</a>
       </div>
@@ -222,5 +285,6 @@
   <script src="lib/@popperjs/core/dist/umd/popper.min.js"></script>
   <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
 
+  <script src="produtos-script.js"></script>
 </body>
 </html>
