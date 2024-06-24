@@ -16,6 +16,7 @@ mongoose.connect(uri)
         console.log('Error connecting to MongoDB', err);
     });
 
+
 // Define schemas and models for all collections
 const schemas = {
     cerveja: new mongoose.Schema({
@@ -54,6 +55,27 @@ const schemas = {
         imageURL: { type: String, required: true }
     }, { versionKey: false })
 };
+
+const userSchema = new mongoose.Schema({
+    email: String
+}, { versionKey: false });
+
+const User = mongoose.model('User', userSchema);
+
+app.post('/users', function (req, res) {
+
+    const newUser = new User({
+        email: req.body.email
+    });
+
+    newUser.save()
+        .then(function () {
+            res.send({ message: 'User added successfully!', user: newUser });
+        })
+        .catch(function (err) {
+            res.status(400).send({ message: 'Error adding user', error: err });
+        });
+});
 
 const models = {
     Cerveja: mongoose.model('Cerveja', schemas.cerveja),

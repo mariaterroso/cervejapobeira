@@ -101,6 +101,15 @@
     .mobile-show img{
         margin-left: 10px;
     }
+
+    #mobileView {
+        display: block;
+      }
+
+      #nonMobileView {
+        display: none;
+      }
+
 }
 
 /* Media Query for Tablets Ipads portrait mode */
@@ -131,6 +140,14 @@
         font-family: "Montserrat", sans-serif !important;
         font-size: 20px;
     }
+
+    #mobileView {
+        display: block;
+      }
+
+      #nonMobileView {
+        display: none;
+      }
 }
 
 /* Media Query for Laptops and Desktops */
@@ -189,6 +206,14 @@
     .desktop-hid {
         display: none;
     }
+
+    #mobileView {
+        display: none;
+      }
+
+      #nonMobileView {
+        display: block;
+      }
 }
 
 /* Media Query for Screens */
@@ -247,6 +272,14 @@
     .desktop-hid {
         display: none;
     }
+
+    #mobileView {
+        display: none;
+      }
+
+      #nonMobileView {
+        display: block;
+      }
 }
 
 /*////////////////////////////////////////////////////////
@@ -459,4 +492,24 @@
 
   .servicos .formulario .container{
     display: block;
+  }
+
+
+  .carousel-indicators [data-bs-target] {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #000;
+  }
+
+  .carousel-indicators .active {
+    background-color: #000;
+    border: 2px solid #000;
+  }
+
+  .carousel-item {
+    padding: 30px;
+    text-align: center;
+    background-color: #fff;
   }
