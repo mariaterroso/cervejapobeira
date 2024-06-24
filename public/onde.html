@@ -10,9 +10,20 @@
 
 
     <style>
-      /* Mobile-only carousel */
       @media (min-width: 576px) {
-          .mobile-carousel {
+          #mobileView {
+              display: none;
+          }
+          #nonMobileView {
+              display: block;
+          }
+      }
+
+      @media (max-width: 575px) {
+          #mobileView {
+              display: block;
+          }
+          #nonMobileView {
               display: none;
           }
       }
@@ -33,9 +44,9 @@
       .carousel-item {
           padding: 30px;
           text-align: center;
-          background-color: #f8f9fa;
+          background-color: #fff;
       }
-    </style>
+  </style>
   </head>
   <body>
     <!-- NAVBAR -->
@@ -157,34 +168,6 @@
 
   <!-- MAIN -->
   <main>
-    <div id="mobileCarousel" class="carousel slide mobile-carousel" data-bs-ride="carousel">
-      <div class="carousel-indicators">
-          <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div>
-      <div class="carousel-inner">
-          <div class="carousel-item active">
-              <div>
-                  <h5>First Slide</h5>
-                  <p>This is some random text for the first slide.</p>
-              </div>
-          </div>
-          <div class="carousel-item">
-              <div>
-                  <h5>Second Slide</h5>
-                  <p>This is some random text for the second slide.</p>
-              </div>
-          </div>
-          <div class="carousel-item">
-              <div>
-                  <h5>Third Slide</h5>
-                  <p>This is some random text for the third slide.</p>
-              </div>
-          </div>
-      </div>
-    </div>
-
     <div class="container pt-sm-5">
       <div class="row pt-sm-5 pb-5 pt-4">
         <div class="col-sm-2 col-12">
@@ -215,155 +198,250 @@
         </div>
 
 
-
-
-
+        <div id="mobileView">
+          <div id="mobileCarousel" class="carousel slide mobile-carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            <div class="carousel-inner">
+  
+              <div class="image-container col-12" id="image-container1" style="display: block;">
+                
+                <div class="row">
+                  <div class="carousel-item pb-5 active pt-0">
+                    <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
+                      <div class="d-flex justify-content-center align-items-center"
+                        style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
+                                      background-image: url(./imgs/onde_beber.póvoa_de_varzim.jpg); background-repeat: no-repeat; background-size: cover;">
+                        <h3>PÓVOA DE VARZIM</h3>
+                      </div>
+                    </div>
         
+                    <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
+                      <div class="d-flex justify-content-center align-items-center"
+                        style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
+                                      background-image: url(./imgs/onde_beber.vila_do_conde.jpg); background-repeat: no-repeat; background-size: cover;">
+                        <h3>VILA DO CONDE</h3>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="carousel-item pb-5 pt-0">
+                    <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
+                      <div class="d-flex justify-content-center align-items-center"
+                        style="height: 200px; width: 200px; border-radius: 20px; color: white;
+                                background-image: url(./imgs/onde_beber.braga.webp); background-repeat: no-repeat; background-size: cover;">
+                        <h3>PENAFIEL</h3>
+                      </div>
+                    </div>
+        
+                    <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
+                      <div class="d-flex justify-content-center align-items-center"
+                        style="height: 200px; width: 200px; border-radius: 20px; color: white;
+                                      background-image: url(./imgs/onde_beber.porto.webp); background-repeat: no-repeat; background-size: cover;">
+                        <h3>PORTO</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <div class="row mt-sm-5 mt-0">
+                  <div class="carousel-item pb-5 pt-0">
+                    <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
+                      <div class="d-flex justify-content-center align-items-center"
+                        style="height: 200px; width: 200px; border-radius: 20px; color: white;
+                                      background-image: url(./imgs/onde_beber.matosinhos.jpg); background-repeat: no-repeat; background-size: cover;">
+                        <h3>MATOSINHOS</h3>
+                      </div>
+                    </div>
+        
+                    <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
+                      <div class="d-flex justify-content-center align-items-center"
+                        style="height: 200px; width: 200px; border-radius: 20px; color: white;
+                                background-image: url(./imgs/onde_beber.esposende.jpg); background-repeat: no-repeat; background-size: cover;">
+                        <h3>ESPOSENDE</h3>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="carousel-item pb-5 pt-0">
+                    <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
+                      <div class="d-flex justify-content-center align-items-center"
+                        style="height: 200px; width: 200px; border-radius: 20px; color: white;
+                                      background-image: url(./imgs/onde_beber.barcelos.jpg); background-repeat: no-repeat; background-size: cover;">
+                        <h3>BARCELOS</h3>
+                      </div>
+                    </div>
+        
+                    <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
+                      <div class="d-flex justify-content-center align-items-center"
+                        style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
+                                      background-image: url(./imgs/onde_beber.barcelos.jpg); background-repeat: no-repeat; background-size: cover;">
+                        <h3>PONTE DE LIMA</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+        </div>
 
 
+        <div id="nonMobileView" class="col-10">
+          <div class="image-container col-10" id="image-container1" style="display: block;">
+            <div class="row">
+              <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
+                <div class="d-flex justify-content-center align-items-center"
+                  style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
+                                background-image: url(./imgs/onde_beber.póvoa_de_varzim.jpg); background-repeat: no-repeat; background-size: cover;">
+                  <h3>PÓVOA DE VARZIM</h3>
+                </div>
+              </div>
+  
+              <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
+                <div class="d-flex justify-content-center align-items-center"
+                  style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
+                                background-image: url(./imgs/onde_beber.vila_do_conde.jpg); background-repeat: no-repeat; background-size: cover;">
+                  <h3>VILA DO CONDE</h3>
+                </div>
+              </div>
 
-
-        <div class="image-container col-12" id="image-container1" style="display: block;">
-          <div class="row">
-            <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
-              <div class="d-flex justify-content-center align-items-center"
-                style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
-                              background-image: url(./imgs/onde_beber.póvoa_de_varzim.jpg); background-repeat: no-repeat; background-size: cover;">
-                <h3>PÓVOA DE VARZIM</h3>
+              <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
+                <div class="d-flex justify-content-center align-items-center"
+                  style="height: 200px; width: 200px; border-radius: 20px; color: white;
+                          background-image: url(./imgs/onde_beber.braga.webp); background-repeat: no-repeat; background-size: cover;">
+                  <h3>PENAFIEL</h3>
+                </div>
+              </div>
+  
+              <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
+                <div class="d-flex justify-content-center align-items-center"
+                  style="height: 200px; width: 200px; border-radius: 20px; color: white;
+                                background-image: url(./imgs/onde_beber.porto.webp); background-repeat: no-repeat; background-size: cover;">
+                  <h3>PORTO</h3>
+                </div>
               </div>
             </div>
-
-            <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
-              <div class="d-flex justify-content-center align-items-center"
-                style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
-                              background-image: url(./imgs/onde_beber.vila_do_conde.jpg); background-repeat: no-repeat; background-size: cover;">
-                <h3>VILA DO CONDE</h3>
+  
+            <div class="row mt-sm-5 mt-0">
+              <div class="carousel-item pb-5 pt-0">
+                <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
+                  <div class="d-flex justify-content-center align-items-center"
+                    style="height: 200px; width: 200px; border-radius: 20px; color: white;
+                                  background-image: url(./imgs/onde_beber.matosinhos.jpg); background-repeat: no-repeat; background-size: cover;">
+                    <h3>MATOSINHOS</h3>
+                  </div>
+                </div>
+    
+                <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
+                  <div class="d-flex justify-content-center align-items-center"
+                    style="height: 200px; width: 200px; border-radius: 20px; color: white;
+                            background-image: url(./imgs/onde_beber.esposende.jpg); background-repeat: no-repeat; background-size: cover;">
+                    <h3>ESPOSENDE</h3>
+                  </div>
+                </div>
               </div>
-            </div>
-
-            <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
-              <div class="d-flex justify-content-center align-items-center"
-                style="height: 200px; width: 200px; border-radius: 20px; color: white;
-                        background-image: url(./imgs/onde_beber.braga.webp); background-repeat: no-repeat; background-size: cover;">
-                <h3>PENAFIEL</h3>
-              </div>
-            </div>
-
-            <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
-              <div class="d-flex justify-content-center align-items-center"
-                style="height: 200px; width: 200px; border-radius: 20px; color: white;
-                              background-image: url(./imgs/onde_beber.porto.webp); background-repeat: no-repeat; background-size: cover;">
-                <h3>PORTO</h3>
+  
+              <div class="carousel-item pb-5 pt-0">
+                <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
+                  <div class="d-flex justify-content-center align-items-center"
+                    style="height: 200px; width: 200px; border-radius: 20px; color: white;
+                                  background-image: url(./imgs/onde_beber.barcelos.jpg); background-repeat: no-repeat; background-size: cover;">
+                    <h3>BARCELOS</h3>
+                  </div>
+                </div>
+    
+                <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
+                  <div class="d-flex justify-content-center align-items-center"
+                    style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
+                                  background-image: url(./imgs/onde_beber.barcelos.jpg); background-repeat: no-repeat; background-size: cover;">
+                    <h3>PONTE DE LIMA</h3>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-
-          <div class="row mt-sm-5 mt-0">
-            <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
-              <div class="d-flex justify-content-center align-items-center"
-                style="height: 200px; width: 200px; border-radius: 20px; color: white;
-                              background-image: url(./imgs/onde_beber.matosinhos.jpg); background-repeat: no-repeat; background-size: cover;">
-                <h3>MATOSINHOS</h3>
+          
+          <div class="image-container col-10" id="image-container2">
+            <div class="row">
+              <div class="col-3">
+                <div class="d-flex justify-content-center align-items-center"
+                  style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
+                                background-image: url(./imgs/onde_beber.póvoa_de_varzim.jpg); background-repeat: no-repeat; background-size: cover;">
+                  <h3>Figueira de Castelo Rodrigo</h3>
+                </div>
+              </div>
+  
+              <div class="col-3">
+                <div class="d-flex justify-content-center align-items-center"
+                  style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
+                                background-image: url(./imgs/onde_beber.póvoa_de_varzim.jpg); background-repeat: no-repeat;">
+                  <h3>A Anunciar</h3>
+                </div>
+              </div>
+  
+              <div class="col-3">
+                <div class="d-flex justify-content-center align-items-center"
+                  style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
+                                background-image: url(./imgs/onde_beber.póvoa_de_varzim.jpg); background-repeat: no-repeat;">
+                  <h3>A Anunciar</h3>
+                </div>
+              </div>
+  
+              <div class="col-3">
+                <div class="d-flex justify-content-center align-items-center"
+                  style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
+                                background-image: url(./imgs/onde_beber.póvoa_de_varzim.jpg); background-repeat: no-repeat;">
+                  <h3>A Anunciar</h3>
+                </div>
               </div>
             </div>
-
-            <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
-              <div class="d-flex justify-content-center align-items-center"
-                style="height: 200px; width: 200px; border-radius: 20px; color: white;
-                        background-image: url(./imgs/onde_beber.esposende.jpg); background-repeat: no-repeat; background-size: cover;">
-                <h3>ESPOSENDE</h3>
+          </div>
+  
+          <div class="image-container col-10" id="image-container3">
+            <div class="row">
+              <div class="col-3">
+                <div class="d-flex justify-content-center align-items-center"
+                  style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
+                                background-image: url(./imgs/onde_beber.póvoa_de_varzim.jpg); background-repeat: no-repeat; background-size: cover;">
+                  <h3>LISBOA</h3>
+                </div>
               </div>
-            </div>
-
-            <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
-              <div class="d-flex justify-content-center align-items-center"
-                style="height: 200px; width: 200px; border-radius: 20px; color: white;
-                              background-image: url(./imgs/onde_beber.barcelos.jpg); background-repeat: no-repeat; background-size: cover;">
-                <h3>BARCELOS</h3>
+  
+              <div class="col-3">
+                <div class="d-flex justify-content-center align-items-center"
+                  style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
+                                background-image: url(./imgs/onde_beber.póvoa_de_varzim.jpg); background-repeat: no-repeat;">
+                  <h3>A Anunciar</h3>
+                </div>
               </div>
-            </div>
-
-            <div class="col-sm-3 col-12 d-flex justify-content-center d-sm-block pb-3">
-              <div class="d-flex justify-content-center align-items-center"
-                style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
-                              background-image: url(./imgs/onde_beber.barcelos.jpg); background-repeat: no-repeat; background-size: cover;">
-                <h3>PONTE DE LIMA</h3>
+  
+              <div class="col-3">
+                <div class="d-flex justify-content-center align-items-center"
+                  style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
+                                background-image: url(./imgs/onde_beber.póvoa_de_varzim.jpg); background-repeat: no-repeat;">
+                  <h3>A Anunciar</h3>
+                </div>
+              </div>
+  
+              <div class="col-3">
+                <div class="d-flex justify-content-center align-items-center"
+                  style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
+                                background-image: url(./imgs/onde_beber.póvoa_de_varzim.jpg); background-repeat: no-repeat;">
+                  <h3>A Anunciar</h3>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="image-container col-10" id="image-container2">
-          <div class="row">
-            <div class="col-3">
-              <div class="d-flex justify-content-center align-items-center"
-                style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
-                              background-image: url(./imgs/onde_beber.póvoa_de_varzim.jpg); background-repeat: no-repeat; background-size: cover;">
-                <h3>Figueira de Castelo Rodrigo</h3>
-              </div>
-            </div>
-
-            <div class="col-3">
-              <div class="d-flex justify-content-center align-items-center"
-                style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
-                              background-image: url(./imgs/onde_beber.póvoa_de_varzim.jpg); background-repeat: no-repeat;">
-                <h3>A Anunciar</h3>
-              </div>
-            </div>
-
-            <div class="col-3">
-              <div class="d-flex justify-content-center align-items-center"
-                style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
-                              background-image: url(./imgs/onde_beber.póvoa_de_varzim.jpg); background-repeat: no-repeat;">
-                <h3>A Anunciar</h3>
-              </div>
-            </div>
-
-            <div class="col-3">
-              <div class="d-flex justify-content-center align-items-center"
-                style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
-                              background-image: url(./imgs/onde_beber.póvoa_de_varzim.jpg); background-repeat: no-repeat;">
-                <h3>A Anunciar</h3>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="image-container col-10" id="image-container3">
-          <div class="row">
-            <div class="col-3">
-              <div class="d-flex justify-content-center align-items-center"
-                style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
-                              background-image: url(./imgs/onde_beber.póvoa_de_varzim.jpg); background-repeat: no-repeat; background-size: cover;">
-                <h3>LISBOA</h3>
-              </div>
-            </div>
-
-            <div class="col-3">
-              <div class="d-flex justify-content-center align-items-center"
-                style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
-                              background-image: url(./imgs/onde_beber.póvoa_de_varzim.jpg); background-repeat: no-repeat;">
-                <h3>A Anunciar</h3>
-              </div>
-            </div>
-
-            <div class="col-3">
-              <div class="d-flex justify-content-center align-items-center"
-                style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
-                              background-image: url(./imgs/onde_beber.póvoa_de_varzim.jpg); background-repeat: no-repeat;">
-                <h3>A Anunciar</h3>
-              </div>
-            </div>
-
-            <div class="col-3">
-              <div class="d-flex justify-content-center align-items-center"
-                style="height: 200px; width: 200px; border-radius: 20px; color: white; text-align: center;
-                              background-image: url(./imgs/onde_beber.póvoa_de_varzim.jpg); background-repeat: no-repeat;">
-                <h3>A Anunciar</h3>
-              </div>
-            </div>
-          </div>
-        </div>
     </div>
   </main>
 
