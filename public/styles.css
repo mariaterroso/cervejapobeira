@@ -29,6 +29,7 @@
 
     p,
     a,
+    li,
     button,
     span,
     input {
@@ -110,6 +111,26 @@
         display: none;
       }
 
+      .product-container{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .products-item{
+        display: flex;
+        flex-direction: column;
+      }
+    
+      .products-item button{
+        color: black;
+        font-weight: bold;
+        border: 3px solid black;
+        background-color: white;
+        padding: 10px;
+        margin-top: 15px;
+      }
+
 }
 
 /* Media Query for Tablets Ipads portrait mode */
@@ -129,6 +150,7 @@
 
     p,
     a,
+    li, 
     button,
     span,
     input {
@@ -167,6 +189,7 @@
 
     p,
     a,
+    li,
     button,
     span,
     input {
@@ -233,6 +256,7 @@
 
     p,
     a,
+    li,
     button,
     span,
     input {
@@ -494,22 +518,48 @@
     display: block;
   }
 
-
-  .carousel-indicators [data-bs-target] {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: #fff;
-    border: 2px solid #000;
+  .produtos .container{
+    display: block;
   }
 
-  .carousel-indicators .active {
-    background-color: #000;
-    border: 2px solid #000;
+  .product-container{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
   }
 
-  .carousel-item {
-    padding: 30px;
-    text-align: center;
-    background-color: #fff;
+  .products-item{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .products-item button{
+    color: black;
+    font-weight: bold;
+    border: 3px solid black;
+    background-color: white;
+    padding: 10px;
+    margin-top: 15px;
+  }
+
+  .products-item button:hover{
+    color: white;
+    border: 3px solid black;
+    background-color: black;
+    padding: 10px;
+    margin-top: 15px;
+  }
+
+  .button-one::after{
+    content: '+';
+    font-size: 16px;
+    position: relative;
+    left: 40px;
+  }
+
+  .button-one::before{
+    content: '-';
+    font-size: 16px;
+    position: relative;
+    right: 40px;
   }
