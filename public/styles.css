@@ -54,6 +54,11 @@
         text-align: start;
     }
 
+    .encontra-title{
+        word-wrap: break-word;
+        width: 66%;
+    }
+
     .hero-button {
         position: relative;
         bottom: 0;
@@ -248,6 +253,14 @@
 /////HOMEPAGE
 ///////////////////////////////////////////////////////*/
 
+.hero-button:hover {
+    color: red;
+    padding: 15px;
+    background-color: white;
+    border: 3px solid white;
+    font-weight: bold;
+}
+
 .bg-dark {
     background-color: rgb(0 0 0) !important;
 }
@@ -263,8 +276,36 @@
 }
 
 .sobre-button {
+    text-decoration: none;
+    color: #BF3B1D;
     padding: 15px;
     border: 3px solid #BF3B1D;
+    font-weight: bold;
+}
+
+.sobre-button:hover {
+    color: white;
+    padding: 15px;
+    background-color: #BF3B1D;
+    border: 3px solid #BF3B1D;
+    font-weight: bold;
+}
+
+.servico-button {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    border: 3px solid white;
+    font-weight: bold;
+    margin-top: 15px;
+    text-align: center;
+}
+
+.servico-button:hover {
+    color: #90A4BF;
+    padding: 15px;
+    background-color: white;
+    border: 3px solid white;
     font-weight: bold;
 }
 
