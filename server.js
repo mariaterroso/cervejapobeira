@@ -19,7 +19,8 @@ mongoose.connect(uri)
 // Models
 const cervejaSchema = new mongoose.Schema({
     title: String,
-    price: String
+    price: String,
+    imageURL: { type: String, required: true }
 }, { versionKey: false });
 const Cerveja = mongoose.model('Cerveja', cervejaSchema);
 
@@ -56,6 +57,9 @@ app.get('/cerveja', function (req, res) {
     let query = {};
     if (req.query.title) {
         query.title = req.query.title;
+    }
+    if (req.query.price) {
+        query.price = req.query.price;
     }
     Cerveja.find(query)
         .then(function (cerveja) {

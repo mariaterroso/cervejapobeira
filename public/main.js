@@ -5,8 +5,15 @@ function fetchCerveja() {
             let list = document.getElementById('cerveja-list');
             cerveja.forEach(function (cerveja) {
                 let item = document.createElement('li');
-                item.textContent = cerveja.title;
+                let image = document.createElement('img');
+                image.src = cerveja.imageURL;
+                image.alt = cerveja.title;
+                image.style.width = '150px'; // Adjust as necessary
+                image.style.height = '250px'; // Adjust as necessary
+
+                item.textContent = `${cerveja.title} - ${cerveja.price}`;
                 list.appendChild(item);
+                item.appendChild(image);
             });
         })
         .catch(function (error) {
