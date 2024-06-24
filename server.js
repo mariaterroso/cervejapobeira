@@ -16,129 +16,91 @@ mongoose.connect(uri)
         console.log('Error connecting to MongoDB', err);
     });
 
-// Models
-const cervejaSchema = new mongoose.Schema({
-    title: String,
-    price: String,
-    imageURL: { type: String, required: true }
-}, { versionKey: false });
-const Cerveja = mongoose.model('Cerveja', cervejaSchema);
+// Define schemas and models for all collections
+const schemas = {
+    cerveja: new mongoose.Schema({
+        title: String,
+        price: String,
+        imageURL: { type: String, required: true }
+    }, { versionKey: false }),
+    
+    packsmistos: new mongoose.Schema({
+        title: String,
+        price: String,
+        imageURL: { type: String, required: true }
+    }, { versionKey: false }),
+    
+    packsharmonizacao: new mongoose.Schema({
+        title: String,
+        price: String,
+        imageURL: { type: String, required: true }
+    }, { versionKey: false }),
+    
+    tapas: new mongoose.Schema({
+        title: String,
+        price: String,
+        imageURL: { type: String, required: true }
+    }, { versionKey: false }),
+    
+    vestuario: new mongoose.Schema({
+        title: String,
+        price: String,
+        imageURL: { type: String, required: true }
+    }, { versionKey: false }),
+    
+    acessorios: new mongoose.Schema({
+        title: String,
+        price: String,
+        imageURL: { type: String, required: true }
+    }, { versionKey: false })
+};
 
-const packsmistosSchema = new mongoose.Schema({
-    title: String,
-    price: String
-}, { versionKey: false });
-const Packsmistos = mongoose.model('Packsmistos', packsmistosSchema);
+const models = {
+    Cerveja: mongoose.model('Cerveja', schemas.cerveja),
+    PacksMistos: mongoose.model('PacksMistos', schemas.packsmistos),
+    Packsharmonizacao: mongoose.model('Packsharmonizacao', schemas.packsharmonizacao),
+    Tapas: mongoose.model('Tapas', schemas.tapas),
+    Vestuario: mongoose.model('Vestuario', schemas.vestuario),
+    Acessorios: mongoose.model('Acessorios', schemas.acessorios)
+};
 
-// Endpoints
-app.post('/cerveja', function (req, res) {
-    let newCerveja = new Cerveja(req.body);
-    newCerveja.save()
-        .then(function (cerveja) {
-            res.send(cerveja);
-        })
-        .catch(function (err) {
-            res.status(400).send({ message: 'Error adding cerveja', error: err });
-        });
-});
+// Helper function to create route handlers for each collection
+function createRouteHandlers(modelName) {
+    const Model = models[modelName];
 
-app.post('/packsmistos', function (req, res) {
-    let newPacksmistos = new Packsmistos(req.body);
-    newPacksmistos.save()
-        .then(function (packsmistos) {
-            res.send(packsmistos);
-        })
-        .catch(function (err) {
-            res.status(400).send({ message: 'Error adding packsmistos', error: err });
-        });
-});
+    app.get(`/${modelName.toLowerCase()}`, (req, res) => {
+        let query = {};
+        if (req.query.title) query.title = req.query.title;
+        if (req.query.price) query.price = req.query.price;
 
-app.get('/cerveja', function (req, res) {
-    let query = {};
-    if (req.query.title) {
-        query.title = req.query.title;
-    }
-    if (req.query.price) {
-        query.price = req.query.price;
-    }
-    Cerveja.find(query)
-        .then(function (cerveja) {
-            res.send(cerveja);
-        })
-        .catch(function (err) {
-            res.status(500).send({ message: 'Error fetching cerveja', error: err });
-        });
-});
+        Model.find(query)
+            .then(items => res.send(items))
+            .catch(err => res.status(500).send({ message: `Error fetching ${modelName.toLowerCase()}`, error: err }));
+    });
 
-app.get('/packsmistos', function (req, res) {
-    let query = {};
-    if (req.query.title) {
-        query.title = req.query.title;
-    }
-    Packsmistos.find(query)
-        .then(function (packsmistos) {
-            res.send(packsmistos);
-        })
-        .catch(function (err) {
-            res.status(500).send({ message: 'Error fetching packsmistos', error: err });
-        });
-});
+    app.post(`/${modelName.toLowerCase()}`, (req, res) => {
+        const newItem = new Model(req.body);
+        newItem.save()
+            .then(item => res.status(201).send(item))
+            .catch(err => res.status(500).send({ message: `Error creating ${modelName.toLowerCase()}`, error: err }));
+    });
 
-app.put('/cerveja/:id', function (req, res) {
-    Cerveja.findByIdAndUpdate(req.params.id, req.body, { new: true })
-        .then(function (cerveja) {
-            if (cerveja) {
-                res.send(cerveja);
-            } else {
-                res.status(404).send({ message: 'Cerveja not found' });
-            }
-        })
-        .catch(function (err) {
-            res.status(500).send({ message: 'Error updating cerveja', error: err });
-        });
-});
+    app.put(`/${modelName.toLowerCase()}/:id`, (req, res) => {
+        Model.findByIdAndUpdate(req.params.id, req.body, { new: true })
+            .then(item => res.send(item))
+            .catch(err => res.status(500).send({ message: `Error updating ${modelName.toLowerCase()}`, error: err }));
+    });
 
-app.put('/packsmistos/:id', function (req, res) {
-    Packsmistos.findByIdAndUpdate(req.params.id, req.body, { new: true })
-        .then(function (packsmistos) {
-            if (packsmistos) {
-                res.send(packsmistos);
-            } else {
-                res.status(404).send({ message: 'Packsmistos not found' });
-            }
-        })
-        .catch(function (err) {
-            res.status(500).send({ message: 'Error updating packsmistos', error: err });
-        });
-});
+    app.delete(`/${modelName.toLowerCase()}/:id`, (req, res) => {
+        Model.findByIdAndDelete(req.params.id)
+            .then(() => res.status(204).send())
+            .catch(err => res.status(500).send({ message: `Error deleting ${modelName.toLowerCase()}`, error: err }));
+    });
+}
 
-app.delete('/cerveja/:id', function (req, res) {
-    Cerveja.findByIdAndDelete(req.params.id)
-        .then(function (cerveja) {
-            if (cerveja) {
-                res.send({ message: 'Cerveja deleted successfully!' });
-            } else {
-                res.status(404).send({ message: 'Cerveja not found' });
-            }
-        })
-        .catch(function (err) {
-            res.status(500).send({ message: 'Error deleting cerveja', error: err });
-        });
-});
+// Create route handlers for all collections
+['Cerveja', 'PacksMistos', 'Packsharmonizacao', 'Tapas', 'Vestuario', 'Acessorios'].forEach(createRouteHandlers);
 
-app.delete('/packsmistos/:id', function (req, res) {
-    Packsmistos.findByIdAndDelete(req.params.id)
-        .then(function (packsmistos) {
-            if (packsmistos) {
-                res.send({ message: 'Packsmistos deleted successfully!' });
-            } else {
-                res.status(404).send({ message: 'Packsmistos not found' });
-            }
-        })
-        .catch(function (err) {
-            res.status(500).send({ message: 'Error deleting packsmistos', error: err });
-        });
-});
 
 app.listen(5500, function () {
     console.log('Server running on http://localhost:5500');
