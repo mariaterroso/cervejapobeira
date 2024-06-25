@@ -219,7 +219,7 @@
 @media (min-width: 1025px) and (max-width: 1280px) {
   h1 {
     font-family: "F0Geena Mono Bold", "Oswald", sans-serif;
-    font-size: 90px;
+    font-size: 70px;
   }
 
   h2,
@@ -259,9 +259,9 @@
 
   .hero-title {
     word-wrap: break-word;
-    width: 40%;
+    width: 30%;
     position: relative;
-    bottom: 230px;
+    bottom: 290px;
     right: 150px;
     text-align: start;
   }
@@ -299,7 +299,7 @@
 @media (min-width: 1280px) {
   h1 {
     font-family: "F0Geena Mono Bold", "Oswald", sans-serif;
-    font-size: 90px;
+    font-size: 70px;
   }
 
   h2,
@@ -339,16 +339,16 @@
 
   .hero-title {
     word-wrap: break-word;
-    width: 40%;
+    width: 30%;
     position: relative;
-    bottom: 230px;
+    bottom: 290px;
     right: 150px;
     text-align: start;
   }
 
   .hero-button {
     position: relative;
-    bottom: 180px;
+    bottom: 230px;
     right: 750px;
     text-decoration: none;
     color: white;
@@ -381,7 +381,7 @@
 
 
 .hero-button:hover {
-  color: red;
+  color: black;
   padding: 15px;
   background-color: white;
   border: 3px solid white;
@@ -647,4 +647,8 @@
   font-size: 16px;
   position: relative;
   right: 40px;
+}
+
+.border-white{
+  border-color: rgb(123 123 123) !important;
 }
