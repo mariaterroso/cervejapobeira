@@ -166,6 +166,11 @@
     margin-top: 15px;
   }
 
+  .parceiros-mobile{
+    display: flex;
+    overflow-y: scroll;
+  }
+
 }
 
 /* Media Query for Tablets Ipads portrait mode */
